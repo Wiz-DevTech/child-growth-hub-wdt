@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -16,7 +17,38 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Product routes */}
+          <Route path="/products" element={<NotFound />} />
+          <Route path="/products/:id" element={<NotFound />} />
+          <Route path="/products/age/:age" element={<NotFound />} />
+          <Route path="/products/skill/:skill" element={<NotFound />} />
+          <Route path="/products/new" element={<NotFound />} />
+          <Route path="/products/sale" element={<NotFound />} />
+          
+          {/* User account routes */}
+          <Route path="/login" element={<NotFound />} />
+          <Route path="/register" element={<NotFound />} />
+          <Route path="/account" element={<NotFound />} />
+          
+          {/* Cart and checkout */}
+          <Route path="/cart" element={<NotFound />} />
+          <Route path="/checkout" element={<NotFound />} />
+          
+          {/* Blog routes */}
+          <Route path="/blog" element={<NotFound />} />
+          <Route path="/blog/:id" element={<NotFound />} />
+          
+          {/* Info pages */}
+          <Route path="/about" element={<NotFound />} />
+          <Route path="/contact" element={<NotFound />} />
+          <Route path="/faq" element={<NotFound />} />
+          <Route path="/careers" element={<NotFound />} />
+          <Route path="/privacy" element={<NotFound />} />
+          <Route path="/terms" element={<NotFound />} />
+          <Route path="/shipping" element={<NotFound />} />
+          <Route path="/returns" element={<NotFound />} />
+          
+          {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
